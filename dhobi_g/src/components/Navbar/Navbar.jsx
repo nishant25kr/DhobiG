@@ -42,8 +42,8 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-blue-500">
             About
           </Link>
-          <Link href="/accounts" className="hover:text-blue-500">
-            Accounts
+          <Link href="/product" className="hover:text-blue-500">
+            Product
           </Link>
 
           {/* Sign In Button */}
