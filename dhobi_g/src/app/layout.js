@@ -13,12 +13,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         style={{
-          background: "linear-gradient(rgb(120, 140, 176) 0%,rgb(192, 200, 218) 25%, rgb(120, 140, 176) 50%,rgb(192, 200, 218) 100%)",
-          minHeight: "400vh",
+          background: "linear-gradient(rgb(120, 140, 176) 0%,rgb(192, 200, 218) 50%, rgb(120, 140, 176) 100%",
+          // minHeight: "400vh",
         }}
       >
         <Navbar />
-        <main className="">{children}</main>
+        <main className="py-15">{children}</main>
         <Footer />
       </body>
     </html>

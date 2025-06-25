@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 
-body{
+/* body{
   background: linear-gradient(rgb(120, 140, 176) 0%, rgb(174, 185, 212) 100%);
   height: 850px;
 
-}
+} */
 
 @keyframes text-gradient {
   0%, 100% {
