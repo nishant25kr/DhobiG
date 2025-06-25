@@ -11,9 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 min-h-screen">
+      <body
+        style={{
+          background: "linear-gradient(rgb(120, 140, 176) 0%,rgb(192, 200, 218) 25%, rgb(120, 140, 176) 50%,rgb(192, 200, 218) 100%)",
+          minHeight: "400vh",
+        }}
+      >
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
