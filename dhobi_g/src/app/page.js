@@ -1,4 +1,67 @@
+"use client";
+import { useState } from "react";
+import {
+  FaUniversity,
+  FaUserFriends,
+  FaShoppingCart,
+  FaCogs,
+} from "react-icons/fa";
+import "./globals.css"; // this is required to activate your custom CSS
+
+const products = [
+  {
+    name: "DG Campus",
+    tagline: "Simplifying Campus Laundry Operations.",
+    description:
+      "End-to-end laundry management for educational institutions with dedicated apps for students, staff, and administrators.",
+    bullets: [
+      "Student App for tracking laundry",
+      "Staff App for scheduling and updates",
+      "Centralized Admin Dashboard for operations",
+    ],
+    icon: <FaUniversity className="text-blue-600 text-3xl mb-2" />,
+  },
+  {
+    name: "DG Subscription",
+    tagline: "Cloud-Based Laundry Services for Individuals.",
+    description:
+      "A subscription-based model for seamless laundry services with customer and delivery apps.",
+    bullets: [
+      "Flexible subscription plans",
+      "Delivery tracking with Delivery Boy App",
+      "Transparent billing and reminders",
+    ],
+    icon: <FaUserFriends className="text-green-600 text-3xl mb-2" />,
+  },
+  {
+    name: "Ecommerce Platform",
+    tagline: "An Online Marketplace for Laundry Businesses.",
+    description:
+      "Connect customers, laundry businesses, and B2B vendors through a robust e-commerce platform.",
+    bullets: [
+      "Customer and Partner Apps",
+      "Equipment and essentials procurement",
+      "B2B and B2C integrations",
+    ],
+    icon: <FaShoppingCart className="text-purple-600 text-3xl mb-2" />,
+  },
+  {
+    name: "LaundryOS",
+    tagline: "The Operating System for Modern Laundry Businesses.",
+    description:
+      "Comprehensive software for managing orders, fleets, inventory, and POS systems.",
+    bullets: [
+      "Fleet Management for optimized logistics",
+      "Order & Inventory Management systems",
+      "Custom POS and automated tax documentation",
+    ],
+    icon: <FaCogs className="text-red-600 text-3xl mb-2" />,
+  },
+];
+
 export default function Home() {
+  const [hovered, setHovered] = useState(null);
+
   return (
     <div className="">
       {/* Hero */}
@@ -25,7 +88,7 @@ export default function Home() {
               <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
                 Book Now
               </button>
-              <button className="bg-white text-gray-800 font-semibold px-6 py-3 rounded-xl border shadow hover:bg-gray-100 transition">
+              <button className="bg-gray-200 text-gray-800 font-semibold px-6 py-3 rounded-xl border shadow hover:bg-gray-100 transition">
                 Schedule Later
               </button>
             </div>
@@ -33,109 +96,141 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Dhobi G */}
-      <section className="p-8 text-center w-full  mt-10 ">
-        <h2 className="text-3xl font-bold mb-8">Why Choose Dhobi G?</h2>
+      {/*product section */}
+      <section className="py-16 px-6 rounded-xl">
+        <h2 className="text-5xl font-bold text-gray-800 text-center mb-12">
+          Explore Our Innovative Laundry Solutions
+        </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-          {/* Text Blocks */}
-          <div className="w-full md:w-1/2 max-w-2xl px-5 space-y-6">
-            {/* Block 1 */}
-            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
-              <p className="text-md leading-relaxed font-medium">
-                🚀 <strong>Fast Pickup & Doorstep Delivery</strong>
-                <br />
-                No queues. No waiting. We come to you.
-              </p>
+        <div className="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto">
+          {/* Left Info Panel */}
+          {/* <div className="w-full md:w-1/3">
+            <div className=" p-6 rounded-xl shadow min-h-[250px] h-full flex items-center justify-center animate-fadeIn transition-all duration-300">
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  What Makes Us Special
+                </h3>
+                <p className="text-black text-lg mb-4">
+                  {hovered !== null
+                    ? products[hovered].tagline
+                    : "Tailored digital tools for every laundry need — from campus to doorstep."}
+                </p>
+
+                {hovered !== null && (
+                  <div className="transition-opacity duration-300">
+                    <p className="text-gray-700 mb-3">
+                      {products[hovered].description}
+                    </p>
+                    <ul className="list-disc pl-5 text-gray-600 space-y-1 mb-2 text-left">
+                      {products[hovered].bullets.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                    <p className="text-sm text-blue-600 font-medium">
+                      {products[hovered].cta}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
+          </div> */}
 
-            {/* Block 2 */}
-            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
-              <p className="text-md leading-relaxed font-medium">
-                💰 <strong>Affordable for Students & Professionals</strong>
-                <br />
-                Flexible plans that suit your budget.
-              </p>
-            </div>
+          <div className="fadeIn w-full md:w-1/3 ">
+            <div className="p-6 rounded-xl shadow min-h-[250px] h-full flex items-center justify-center transition-all duration-300">
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  What Makes Us Special
+                </h3>
+                <p className="text-black text-lg mb-4">
+                  {hovered !== null
+                    ? products[hovered].tagline
+                    : "Tailored digital tools for every laundry need — from campus to doorstep."}
+                </p>
 
-            {/* Block 3 */}
-            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
-              <p className="text-md leading-relaxed font-medium">
-                🌿 <strong>Eco-Friendly & Gentle Care</strong>
-                <br />
-                Safe on clothes and the planet.
-              </p>
-            </div>
-
-            {/* Block 4 */}
-            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
-              <p className="text-md leading-relaxed font-medium">
-                📲 <strong>Real-Time Tracking & Updates</strong>
-                <br />
-                Know your laundry status at every step.
-              </p>
+                {hovered !== null && (
+                  <div className="transition-opacity duration-300">
+                    <p className="text-gray-700 mb-3">
+                      {products[hovered].description}
+                    </p>
+                    <ul className="list-disc pl-5 text-gray-600 space-y-1 mb-2 text-left">
+                      {products[hovered].bullets.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                    <p className="text-sm text-blue-600 font-medium">
+                      {products[hovered].cta}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="w-full md:w-[400px] h-[500px] rounded overflow-hidden shadow-lg">
+          {/* Right Card Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-2/3">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="bg-gray-200  rounded-xl p-5 shadow-md transition-all duration-400 min-h-[250px] hover:scale-101 hover:shadow-2xl"
+                onMouseEnter={() => setHovered(index)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <div className="flex flex-col">
+                  {product.icon}
+                  <h4 className="text-xl font-bold text-blue-800">
+                    {product.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-2">
+                    {product.tagline}
+                  </p>
+                  <ul className="list-disc text-sm text-gray-500 pl-5 space-y-0.5">
+                    {product.bullets.slice(0, 3).map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-blue-600 font-medium mt-2">
+                    {product.cta}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/*Award and Achivment section*/}
+      <section className="py-16 px-4 ">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-20">
+            Awards & Achievements
+          </h2>
+
+          {/* Accredited By */}
+          <div className="mb-12">
             <img
-              src="https://images.pexels.com/photos/8774363/pexels-photo-8774363.jpeg"
-              alt="Laundry Service"
-              className="w-full h-full object-cover"
+              src="https://dhobig.com/assets/img/Untitled-2-01.png" // Adjust path as needed
+              alt="Awarded and Accredited by"
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-md"
+            />
+          </div>
+
+          {/* Top Rated */}
+          <div>
+            <img
+              src="https://dhobig.com/assets/img/Untitled-2-02.png" // Adjust path as needed
+              alt="Top Rated Laundry Service"
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-md"
             />
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-12 mt-10  text-center">
-        <h2 className="text-3xl font-bold mb-4">How Dhobi G Works</h2>
+      {/*Partner section*/}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4 mt-9">
-          {/* Card 1 */}
-          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-            <div className="text-5xl mb-2">🧺</div>
-            <p className="text-lg font-semibold text-gray-800">
-              Schedule Pickup
-            </p>
-            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
-              Book a convenient pickup time through our website or app.
-            </p>
-          </div>
+      
 
-          {/* Card 2 */}
-          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-            <div className="text-5xl mb-2">🧼</div>
-            <p className="text-lg font-semibold text-gray-800">
-              We Wash & Iron
-            </p>
-            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
-              Your clothes are washed with care and professionally ironed.
-            </p>
-          </div>
+      
 
-          {/* Card 3 */}
-          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-            <div className="text-5xl mb-2">📦</div>
-            <p className="text-lg font-semibold text-gray-800">Packed Neatly</p>
-            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
-              Items are folded and packed in a clean, hygienic way.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-            <div className="text-5xl mb-2">🚚</div>
-            <p className="text-lg font-semibold text-gray-800">
-              Delivered to You
-            </p>
-            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
-              Clean clothes delivered right to your doorstep — fast & fresh.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

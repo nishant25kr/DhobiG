@@ -27,8 +27,8 @@ export default function Navbar() {
           href="/"
           className="flex items-center space-x-2 text-2xl font-bold text-blue-600 dark:text-white"
         >
-          <img src="/dhobi-logo.webp" alt="Dhobi G Logo" className="h-8 w-8" />
-          <span>Dhobi G</span>
+          <img src="/dhobi-logo.webp" alt="Dhobi G Logo" className="h-8 w-8 m-0" />
+          <span className="text-black">hobi G</span>
         </Link>
 
         {/* Desktop Menu */}

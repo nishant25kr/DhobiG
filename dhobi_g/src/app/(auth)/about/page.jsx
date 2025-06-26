@@ -11,30 +11,109 @@ export default function AboutPage() {
           From college hostels to corporate offices, we deliver clean clothes with care, convenience, and commitment.
         </p>
       </section>
+      <section className="p-8 text-center w-full  mt-10 ">
+        <h2 className="text-3xl font-bold mb-8">Why Choose Dhobi G?</h2>
 
-      {/* Awards & Achievements */}
-      <section className="bg-gray-50 p-8 rounded shadow-sm">
-        <h2 className="text-2xl font-bold mb-10 text-center text-blue-700">🏆 Awards & Achievements</h2>
-        <div className="grid md:grid-cols-3 gap-6 text-center">
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <span className="text-4xl text-yellow-500">🏅</span>
-            <h3 className="text-lg font-semibold mt-3 mb-1">Best Urban Laundry Startup</h3>
-            <p className="text-gray-600 text-sm">Awarded by CleanTech Awards 2024</p>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          {/* Text Blocks */}
+          <div className="w-full md:w-1/2 max-w-2xl px-5 space-y-6">
+            {/* Block 1 */}
+            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
+              <p className="text-md leading-relaxed font-medium">
+                🚀 <strong>Fast Pickup & Doorstep Delivery</strong>
+                <br />
+                No queues. No waiting. We come to you.
+              </p>
+            </div>
+
+            {/* Block 2 */}
+            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
+              <p className="text-md leading-relaxed font-medium">
+                💰 <strong>Affordable for Students & Professionals</strong>
+                <br />
+                Flexible plans that suit your budget.
+              </p>
+            </div>
+
+            {/* Block 3 */}
+            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
+              <p className="text-md leading-relaxed font-medium">
+                🌿 <strong>Eco-Friendly & Gentle Care</strong>
+                <br />
+                Safe on clothes and the planet.
+              </p>
+            </div>
+
+            {/* Block 4 */}
+            <div className="p-6 rounded-xl border-2 border-gray-300 hover:shadow-xl transform transition duration-300 hover:-translate-y-1">
+              <p className="text-md leading-relaxed font-medium">
+                📲 <strong>Real-Time Tracking & Updates</strong>
+                <br />
+                Know your laundry status at every step.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <span className="text-4xl text-green-500">✅</span>
-            <h3 className="text-lg font-semibold mt-3 mb-1">Recognized by Startup India</h3>
-            <p className="text-gray-600 text-sm">For innovation in laundry & logistics</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-            <span className="text-4xl text-indigo-500">📰</span>
-            <h3 className="text-lg font-semibold mt-3 mb-1">Featured in Hindustan Times</h3>
-            <p className="text-gray-600 text-sm">Covered for revolutionizing student laundry</p>
+          {/* Image */}
+          <div className="w-full md:w-[400px] h-[500px] rounded overflow-hidden shadow-lg">
+            <img
+              src="https://images.pexels.com/photos/8774363/pexels-photo-8774363.jpeg"
+              alt="Laundry Service"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
+
+      <section className="py-12 mt-10  text-center">
+        <h2 className="text-3xl font-bold mb-4">How Dhobi G Works</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4 mt-9">
+          {/* Card 1 */}
+          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+            <div className="text-5xl mb-2">🧺</div>
+            <p className="text-lg font-semibold text-gray-800">
+              Schedule Pickup
+            </p>
+            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
+              Book a convenient pickup time through our website or app.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+            <div className="text-5xl mb-2">🧼</div>
+            <p className="text-lg font-semibold text-gray-800">
+              We Wash & Iron
+            </p>
+            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
+              Your clothes are washed with care and professionally ironed.
+            </p>
+          </div>
+          
+
+          {/* Card 3 */}
+          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+            <div className="text-5xl mb-2">📦</div>
+            <p className="text-lg font-semibold text-gray-800">Packed Neatly</p>
+            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
+              Items are folded and packed in a clean, hygienic way.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="group bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+            <div className="text-5xl mb-2">🚚</div>
+            <p className="text-lg font-semibold text-gray-800">
+              Delivered to You
+            </p>
+            <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-600 mt-3 text-center">
+              Clean clothes delivered right to your doorstep — fast & fresh.
+            </p>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* Testimonials */}
