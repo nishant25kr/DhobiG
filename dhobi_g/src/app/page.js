@@ -81,11 +81,11 @@ const founders = [
     linkedin: "https://www.linkedin.com/in/dhobig-daksh-sabharwal/",
   },
   {
-    name: "Deepak",
+    name: "Deepak Neelakandan",
     title: "Co-Founder",
-    image: "/images/founder2.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHiDJJvxvroYw/profile-displayphoto-shrink_400_400/B56ZWYo_IYGUAg-/0/1742022637001?e=1756339200&v=beta&t=xGYSjj9A-q0Yq23HcaxPX_BhjQ-NMjYZhSj_Xydq_j0",
     bio: "Tech leader building sustainable solutions for textile care.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/deepak-neelakandan/",
   },
 ];
 
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/*Founders*/}
-      <section className="py-16 px-6 ">
+      <section className="py-15 px-6 ">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-12">
             Meet Our Founders
@@ -245,7 +245,7 @@ export default function Home() {
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="bg-gray-200 shadow-lg rounded-xl p-6 flex flex-col items-center text-center transition hover:scale-[1.02]"
+                className="bg-gray-200 shadow-lg rounded-xl p-5 flex flex-col items-center text-center transition hover:scale-[1.02]"
               >
                 <img
                   src={founder.image}
