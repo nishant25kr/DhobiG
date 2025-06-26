@@ -27,7 +27,11 @@ export default function Navbar() {
           href="/"
           className="flex items-center space-x-2 text-2xl font-bold text-blue-600 dark:text-white"
         >
-          <img src="/dhobi-logo.webp" alt="Dhobi G Logo" className="h-8 w-8 m-0" />
+          <img
+            src="/dhobi-logo.webp"
+            alt="Dhobi G Logo"
+            className="h-8 w-8 m-0"
+          />
           <span className="text-black">hobi G</span>
         </Link>
 
@@ -36,15 +40,23 @@ export default function Navbar() {
           <Link href="/" className="hover:text-blue-500">
             Home
           </Link>
-          <Link href="/services" className="hover:text-blue-500">
-            Services
-          </Link>
           <Link href="/about" className="hover:text-blue-500">
             About
           </Link>
-          <Link href="/product" className="hover:text-blue-500">
-            Product
+          <Link href="/services" className="hover:text-blue-500">
+            Services
           </Link>
+          <button
+            onClick={() => {
+              const el = document.getElementById("product-section");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="hover:text-blue-600 transition"
+          >
+            Products
+          </button>
+
+          
 
           {/* Sign In Button */}
           <Link

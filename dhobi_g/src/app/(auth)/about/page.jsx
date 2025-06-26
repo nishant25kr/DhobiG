@@ -5,7 +5,7 @@ export default function AboutPage() {
     <div className="p-8 space-y-16  text-gray-800">
       {/* Hero Section */}
       <section className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-700">About Dhobi G</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">About Dhobi G</h1>
         <p className="text-lg max-w-3xl mx-auto text-gray-600">
           Dhobi G is a tech-enabled laundry service offering fast, affordable, and eco-friendly solutions across urban India.
           From college hostels to corporate offices, we deliver clean clothes with care, convenience, and commitment.
