@@ -32,18 +32,18 @@ export default function Navbar() {
             alt="Dhobi G Logo"
             className="h-8 w-8 m-0"
           />
-          <span className="text-black">hobi G</span>
+          <span className="text-white">hobi G</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <Link href="/" className="hover:text-blue-500">
+        <div className="hidden md:flex space-x-6 items-center text-[#111827]">
+          <Link href="/" className="hover:text-[#111827]">
             Home
           </Link>
-          <Link href="/about" className="hover:text-blue-500">
+          <Link href="/about" className="hover:text-[#111827]">
             About
           </Link>
-          <Link href="/services" className="hover:text-blue-500">
+          <Link href="/services" className="hover:text-[#111827]">
             Services
           </Link>
           <button
@@ -51,17 +51,20 @@ export default function Navbar() {
               const el = document.getElementById("product-section");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#111827] transition "
           >
             Products
           </button>
+          <Link href="/contactus" className="hover:text-[#111827]">
+            ContactUs
+          </Link>
 
           
 
           {/* Sign In Button */}
           <Link
             href="/signin"
-            className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-xl shadow hover:bg-blue-700 transition"
+            className="bg-[#007BB5] text-white font-semibold px-6 py-2 rounded-xl shadow hover:bg-[#005f91] transition"
           >
             Sign In
           </Link>

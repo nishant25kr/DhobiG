@@ -40,7 +40,7 @@ const Footer = () => {
                   href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-10 h-10 bg-[#007BB5] rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <Instagram size={20} />
                 </a>
@@ -48,7 +48,7 @@ const Footer = () => {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-10 h-10 bg-[#007BB5] rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -56,7 +56,7 @@ const Footer = () => {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-10 h-10 bg-[#007BB5] rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <Facebook size={20} />
                 </a>
@@ -128,7 +128,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-blue-400" />
+                <Mail size={18} className="text-[#007BB5]" />
                 <a 
                   href="mailto:info@dhobig.com" 
                   className="text-gray-300 hover:text-white transition-colors"
@@ -137,7 +137,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-blue-400" />
+                <Phone size={18} className="text-[#007BB5]" />
                 <a 
                   href="tel:+1234567890" 
                   className="text-gray-300 hover:text-white transition-colors"
@@ -146,7 +146,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin size={18} className="text-blue-400 mt-1" />
+                <MapPin size={18} className="text-[#007BB5] mt-1" />
                 <div className="text-gray-300">
                   <p>123 Laundry Street</p>
                   <p>Clean City, CC 12345</p>

@@ -6,6 +6,8 @@ import {
   FaShoppingCart,
   FaCogs,
 } from "react-icons/fa";
+
+
 import "./globals.css"; // this is required to activate your custom CSS
 
 const products = [
@@ -19,7 +21,7 @@ const products = [
       "Staff App for scheduling and updates",
       "Centralized Admin Dashboard for operations",
     ],
-    icon: <FaUniversity className="text-blue-600 text-3xl mb-2" />,
+    icon: <FaUniversity className="text-[#007BB5] text-3xl mb-2" />,
   },
   {
     name: "DG Subscription",
@@ -31,7 +33,7 @@ const products = [
       "Delivery tracking with Delivery Boy App",
       "Transparent billing and reminders",
     ],
-    icon: <FaUserFriends className="text-green-600 text-3xl mb-2" />,
+    icon: <FaUserFriends className="text-[#007BB5]  text-3xl mb-2" />,
   },
   {
     name: "Ecommerce Platform",
@@ -43,7 +45,7 @@ const products = [
       "Equipment and essentials procurement",
       "B2B and B2C integrations",
     ],
-    icon: <FaShoppingCart className="text-purple-600 text-3xl mb-2" />,
+    icon: <FaShoppingCart className="text-[#007BB5]  text-3xl mb-2" />,
   },
   {
     name: "LaundryOS",
@@ -55,46 +57,42 @@ const products = [
       "Order & Inventory Management systems",
       "Custom POS and automated tax documentation",
     ],
-    icon: <FaCogs className="text-red-600 text-3xl mb-2" />,
+    icon: <FaCogs className="text-[#007BB5]  text-3xl mb-2" />,
   },
 ];
 const founders = [
   {
     name: "Ravi Ranjan ",
     title: "Co-Founder & CEO",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQFJcn0KQ0NxfQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1664555300482?e=1756339200&v=beta&t=gnmFMcIT6hQY52OOu9gfBz49DvbNjt07jR8bPqcVNqo", // replace with actual path or URL
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQFJcn0KQ0NxfQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1664555300482?e=1756339200&v=beta&t=gnmFMcIT6hQY52OOu9gfBz49DvbNjt07jR8bPqcVNqo", // replace with actual path or URL
     bio: "Passionate about transforming the laundry industry through digital innovation.",
     linkedin: "https://linkedin.com/in/amitkumar",
   },
   {
-    name: "Vidhusha Manimaran ",
-    title: "Co-Founder & CTO",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGM_Ch0bVkTiw/profile-displayphoto-shrink_800_800/B56ZbtGdYIH4Ak-/0/1747734616279?e=1756339200&v=beta&t=ULbbidfszv81ObKdvWWp6LssAx8wFCdz51uZUNsKVNw",
+    name: "Ankur Gupta",
+    title: "Co-Founder & COO",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQFs0qNeb9VqMQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711439376973?e=1756339200&v=beta&t=osZcIViYd9zFEbRnVXoGdQ0R_PhiAXAMfnu7birYLB0",
     bio: "Tech leader building sustainable solutions for textile care.",
-    linkedin: "http://linkedin.com/in/vidhusha-manimaran-dhobig/",
+    linkedin: "https://www.linkedin.com/in/ankurdhobig/?originalSubdomain=in",
   },
   {
     name: "Daksh Sabharwal",
     title: "Co-Founder & CMO",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQFjoYr3lNMdKw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690138903313?e=1756339200&v=beta&t=nIygnnZHKjhku1NZDKba-jke6_FBg9YR6UOSqSnKxXg", // replace with actual path or URL
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQFjoYr3lNMdKw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690138903313?e=1756339200&v=beta&t=nIygnnZHKjhku1NZDKba-jke6_FBg9YR6UOSqSnKxXg", // replace with actual path or URL
     bio: "Passionate about transforming the laundry industry through digital innovation.",
     linkedin: "https://www.linkedin.com/in/dhobig-daksh-sabharwal/",
   },
-  {
-    name: "Deepak Neelakandan",
-    title: "Co-Founder",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQHiDJJvxvroYw/profile-displayphoto-shrink_400_400/B56ZWYo_IYGUAg-/0/1742022637001?e=1756339200&v=beta&t=xGYSjj9A-q0Yq23HcaxPX_BhjQ-NMjYZhSj_Xydq_j0",
-    bio: "Tech leader building sustainable solutions for textile care.",
-    linkedin: "https://www.linkedin.com/in/deepak-neelakandan/",
-  },
 ];
-
 
 export default function Home() {
   const [hovered, setHovered] = useState(null);
 
   return (
     <div className="">
+
       {/* Hero */}
       <section
         className="relative h-[70vh]  bg-cover bg-center flex items-center justify-center text-white"
@@ -105,17 +103,17 @@ export default function Home() {
           <h1 className="text-9xl font-bold mb-4  p-1 text-black rounded-xl">Happy Life</h1>
           <h1 className="text-5xl font-bold mb-4  p-1 text-black rounded-xl">Book with Dhobi G </h1> */}
           <div className="text-center">
-            <h1 className="text-6xl md:text-9xl font-extrabold mb-2 text-black drop-shadow">
+            <h1 className="text-6xl md:text-9xl font-extrabold mb-2 text-[#111827] drop-shadow">
               Clean Clothes,
             </h1>
-            <h1 className="text-6xl md:text-9xl font-extrabold mb-2 text-black drop-shadow">
+            <h1 className="text-6xl md:text-9xl font-extrabold mb-2 text-[#111827] drop-shadow">
               Happy Life
             </h1>
             <h2 className="text-3xl md:text-5xl font-semibold mt-6 bg-gradient-to-r from-blue-600 via-indigo-800 to-gray-900 bg-clip-text text-transparent animate-text">
               Book with Dhobi G
             </h2>
             <div className="flex flex-wrap gap-4 justify-center mt-6">
-              <button className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+              <button className="bg-[#007BB5] text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-[#005f91] transition">
                 Book Now
               </button>
               <button className="bg-gray-200 text-gray-800 font-semibold px-6 py-3 rounded-xl border shadow hover:bg-gray-100 transition">
@@ -138,7 +136,10 @@ export default function Home() {
           <div className="fadeIn w-full md:w-1/3 ">
             <div className="p-6 rounded-xl shadow min-h-[250px] h-full flex items-center justify-center transition-all duration-300">
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-black mb-2">
+                <h3
+                  className="text-xl font-semibold text-black mb-2"
+                  style={{ color: "#1f2937 " }}
+                >
                   What Makes Us Special
                 </h3>
                 <p className="text-black text-lg mb-4">
@@ -171,19 +172,20 @@ export default function Home() {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="bg-gray-200  rounded-xl p-5 shadow-md transition-all duration-400 min-h-[250px] hover:scale-101 hover:shadow-2xl"
+                className=" rounded-xl p-5 shadow-md transition-all duration-400 min-h-[250px] hover:scale-101 hover:shadow-2xl"
+                style={{ backgroundColor: "#e5e7eb", color: "#4b5563 " }}
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
               >
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                   {product.icon}
-                  <h4 className="text-xl font-bold text-blue-800">
+                  <h4 className="text-xl font-bold text-[#007BB5]">
                     {product.name}
                   </h4>
                   <p className="text-gray-600 text-sm mb-2">
                     {product.tagline}
                   </p>
-                  <ul className="list-disc text-sm text-gray-500 pl-5 space-y-0.5">
+                  <ul className="list-disc text-sm  pl-5 space-y-0.5">
                     {product.bullets.slice(0, 3).map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -226,31 +228,70 @@ export default function Home() {
       </section>
 
       {/*Partner section*/}
-      <section>
-        <div className="max-w-6xl mx-auto text-center h-50 bg-gray-200">
-          <p className="text-3xl md:text-5xl font-bold text-gray-800 mb-20">
-            Our Partner
-          </p>
+      <section className="partner-section relative overflow-hidden py-16 px-4 ">
+        {/* Animated Shapes */}
+        <div className="animated-shapes absolute inset-0 pointer-events-none z-0">
+          <div className="before:content-[''] before:absolute before:w-[220px] before:h-[220px] before:bg-[#6c63ff] before:rounded-full before:opacity-[0.18] before:left-[-80px] before:top-[40px] before:animate-float" />
+          <div className="after:content-[''] after:absolute after:w-[160px] after:h-[160px] after:bg-[#00bfae] after:rounded-full after:opacity-[0.18] after:right-[-60px] after:bottom-[30px] after:animate-float" />
+        </div>
+
+        {/* Content */}
+        <div className="partner-container relative z-10 max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-10">
+          {/* Left Text */}
+          <div className="partner-text opacity-100 translate-y-0 transition duration-700 ease-in-out min-w-[220px]">
+            <h3 className="text-xl md:text-3xl font-semibold text-gray-800 leading-snug">
+              Trusted by Industry Leaders
+              <br /> for Laundry Innovation & Efficiency
+            </h3>
+          </div>
+
+          {/* Logos */}
+          <div className="partner-logos flex flex-wrap items-center gap-8 flex-1 min-w-[300px] m-5">
+            {[
+              {
+                name: "TNSDC",
+                logo: "https://www.tnskill.tn.gov.in/wp-content/uploads/2025/02/tnskill-logo-250x125-1.png"
+
+              },
+              {
+                name: "TNSKILL",
+                logo: "https://www.tnskill.tn.gov.in/wp-content/uploads/2025/02/tnskill-logo-250x125-1.png"
+              },
+              
+            ].map((partner, i) => (
+              <div
+                key={i}
+                className="logo-card bg-white rounded-[18px] p-4 shadow-md opacity-100 transform translate-y-0 scale-100 transition duration-500 ease-in-out hover:scale-110 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-10 w-auto filter grayscale opacity-85 transition duration-300 hover:grayscale-0 hover:opacity-100"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/*Founders*/}
-      <section className="py-15 px-6 ">
+      <section className="py-16 px-6 ">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-12">
+          <h2 className="text-4xl font-bold text-white mb-12">
             Meet Our Founders
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {founders.map((founder, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {founders.map((founder, idx) => (
               <div
-                key={index}
-                className="bg-gray-200 shadow-lg rounded-xl p-5 flex flex-col items-center text-center transition hover:scale-[1.02]"
+                key={idx}
+                className=" backdrop-blur-md p-6 rounded-xl shadow-lg text-center hover:scale-[1.02] transition transform duration-300"
+                style={{ backgroundColor: "#e5e7eb" }}
               >
                 <img
                   src={founder.image}
                   alt={founder.name}
-                  className="w-32 h-32 object-cover rounded-full mb-4"
+                  className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-4 border-blue-300"
                 />
                 <h3 className="text-xl font-semibold text-gray-800">
                   {founder.name}
@@ -261,7 +302,7 @@ export default function Home() {
                   href={founder.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 text-sm font-medium mt-3 hover:underline"
+                  className="text-blue-600 font-medium text-sm mt-2 inline-block hover:underline"
                 >
                   LinkedIn
                 </a>
@@ -270,6 +311,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
